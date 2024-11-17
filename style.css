@@ -1,36 +1,43 @@
-/* General Reset */
-body {
+/* Reset default margin and padding for all elements */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
+    box-sizing: border-box;
 }
 
-/* Header Section */
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Header styles */
 header {
+    background-color: #2C3E50; /* Dark Blue */
+    color: white;
+    padding: 40px;
     text-align: center;
-    background-color: #444;
-    color: #fff;
-    padding: 20px;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 36px;
     margin: 0;
 }
 
 header p {
-    margin: 10px 0 0;
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 20px;
+    margin: 5px 0;
 }
 
-/* Navigation */
+/* Navigation styles */
 nav {
-    background-color: #222;
-    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #34495E; /* Dark Grey */
+    z-index: 1000;
 }
 
 nav ul {
@@ -42,31 +49,96 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
+    padding: 14px 20px;
+    display: inline-block;
     text-decoration: none;
-    font-weight: bold;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #E74C3C; /* Red */
+    color: white;
 }
 
-/* Main Content */
+/* Main content styles */
 main {
-    max-width: 800px;
-    margin: 20px auto;
     padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 60px; /* Adjust for fixed navbar */
 }
 
-main h2 {
-    border-bottom: 2px solid #444;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+/* Section styles */
+section {
+    padding: 60px 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+ul {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* About Section */
+#about {
+    background-color: #1ABC9C; /* Teal */
+    color: white;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #F39C12; /* Orange */
+    color: white;
+}
+
+/* Experience Section */
+#experience {
+    background-color: #2980B9; /* Blue */
+    color: white;
+}
+
+/* Education Section */
+#education {
+    background-color: #8E44AD; /* Purple */
+    color: white;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #27AE60; /* Green */
+    color: white;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
 }
